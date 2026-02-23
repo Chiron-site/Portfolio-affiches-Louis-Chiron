@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Chiron - Portfolio Affiches & Vidéos</title>
+    <style>
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(44, 62, 80, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav { display: flex; gap: 40px; }
+
+        .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+        }
+
+        /* SECTION VIDEOS */
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        
+        h2 { 
+            text-align: center; 
+            font-size: 2.5rem; 
+            margin-bottom: 3rem; 
+            color: #2c3e50; 
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        
+        /* GRILLE VIDEOS : 2 PAR LIGNE */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Force 2 colonnes */
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* SECTION BAS DE PAGE */
+        .footer-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .bottom-image {
+            width: 100%;
+            max-width: 250px; /* Encore un peu plus petite */
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-btn {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+        }
+
+        .video-btn:hover { 
+            transform: translateY(-3px); 
+            background: #34495e;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+
+        /* RESPONSIVE : 1 PAR LIGNE SUR MOBILE */
+        @media (max-width: 768px) {
+            nav { gap: 15px; }
+            .nav-link { font-size: 0.7rem; }
+            .video-grid { grid-template-columns: 1fr; } 
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="https://chiron-site.github.io/Portfolio-accueil-Louis-Chiron/" class="nav-link">Accueil</a>
+            <a href="https://chiron-site.github.io/Portfolio-photographie-Louis-Chiron/" class="nav-link">Photographie</a>
+            <a href="https://chiron-site.github.io/Portfolio-videos-Louis-Chiron/" class="nav-link">Affiches</a>
+            <a href="https://chiron-site.github.io/Portfolio-videos-Louis-Chiron/" class="nav-link">Vidéos</a>
+            <a href="https://chiron-site.github.io/Portfolio-web-Louis-Chiron/" class="nav-link">Web</a>
+            <a href="https://chiron-site.github.io/Portfolio-contact-Louis-Chiron/" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <section id="videos">
+        <h2>Mes Réalisations</h2>
+        
+        <div class="video-grid">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/WHvNeh9Hsz0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Cc29Yx__M-c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/N1E6aS_G6j4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/gfiNQS9exME" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="footer-cta">
+            <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/460d592e-6f46-4709-b03d-f3364bc2a697-img_1464_jpe?asset_id=fbc2b660-d44a-43b5-bf01-797bfc0d73ca&img_etag=%224c7d5492629b4f669fc4c61db130438a%22&image_assets=false&size=1024" alt="Louis Chiron" class="bottom-image">
+            <a class="video-btn" href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank" rel="noopener">Voir plus sur mon YouTube</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Louis Chiron - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
